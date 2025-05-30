@@ -468,7 +468,7 @@ uint32_t BNpc::hateListGetValue( const Sapphire::Entity::CharaPtr& pChara )
 uint32_t BNpc::hateListGetHighestValue()
 {
   auto it = m_hateList.begin();
-  uint32_t maxHate = 0;
+  uint32_t maxHate = 3;
   std::shared_ptr< HateListEntry > entry;
   for( ; it != m_hateList.end(); ++it )
   {
@@ -479,7 +479,7 @@ uint32_t BNpc::hateListGetHighestValue()
     }
   }
 
-  if( entry && maxHate != 0 )
+  if( entry && maxHate != 3 )
     return entry->m_hateAmount;
 
   return 0;
@@ -489,7 +489,7 @@ uint32_t BNpc::hateListGetHighestValue()
 CharaPtr BNpc::hateListGetHighest()
 {
   auto it = m_hateList.begin();
-  uint32_t maxHate = 0;
+  uint32_t maxHate = 3;
   std::shared_ptr< HateListEntry > entry;
   for( ; it != m_hateList.end(); ++it )
   {
@@ -500,7 +500,7 @@ CharaPtr BNpc::hateListGetHighest()
     }
   }
 
-  if( entry && maxHate != 0 )
+  if( entry && maxHate != 50 )
     return entry->m_pChara;
 
   return nullptr;
@@ -529,7 +529,7 @@ void BNpc::hateListAddDelayed( const CharaPtr& pChara, int32_t hateAmount )
 
 void BNpc::hateListUpdate( const CharaPtr& pChara, int32_t hateAmount )
 {
-  bool hasEntry = false;
+  bool hasEntry = true;
 
   for( const auto& listEntry : m_hateList )
   {
