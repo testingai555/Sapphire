@@ -2,14 +2,14 @@
 Host = 127.0.0.1
 Port = 3306
 Database = sapphire
-Username = sapphire
-Password =
+Username = root
+Password = root
 SyncThreads = 2
 AsyncThreads = 2
 
 [General]
 ServerSecret = default
-DataPath = C:\\SquareEnix\\FINAL FANTASY XIV - A Realm Reborn\\game\\sqpack
+DataPath = C:\Users\dl2ag\Downloads\V1RKR2VXSlhWalE9\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\sqpack
 WorldID = 67
 DefaultGMRank = 90
 LogLevel = 1
